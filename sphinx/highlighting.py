@@ -19,6 +19,7 @@ from pygments import highlight
 from pygments.lexers import PythonLexer, Python3Lexer, PythonConsoleLexer, \
     CLexer, TextLexer, RstLexer
 from pygments.lexers import get_lexer_by_name, guess_lexer
+from pygmentslexerbabylon import BabylonLexer
 from pygments.formatters import HtmlFormatter, LatexFormatter
 from pygments.filters import ErrorToken
 from pygments.styles import get_style_by_name
@@ -33,6 +34,7 @@ lexers = dict(
     pycon3 = PythonConsoleLexer(python3=True, stripnl=False),
     rest = RstLexer(stripnl=False),
     c = CLexer(stripnl=False),
+    javascript = BabylonLexer(),
 )
 for _lexer in lexers.values():
     _lexer.add_filter('raiseonerror')
